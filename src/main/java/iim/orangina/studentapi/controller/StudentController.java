@@ -18,16 +18,9 @@ public class StudentController {
     public List<Student> getStudentByTags(
             @RequestParam(required = false) String contract,
             @RequestParam(required = false) String jobs,
-            @RequestParam(required = false) String year,
+            @RequestParam(required = false) Integer experience,
             @RequestParam(required = false) String activities
     ) {
-        return studentService.getByTags(contract, jobs, year, activities);
-    }
-
-    @PostMapping
-    public void setStudentData(
-            @RequestBody List<Student> studentList
-    ) {
-        studentService.setStudentData(studentList);
+        return studentService.getByTags(contract, jobs, experience, activities);
     }
 }
