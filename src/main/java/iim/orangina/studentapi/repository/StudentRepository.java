@@ -22,7 +22,7 @@ public class StudentRepository {
             "FROM STUDENTS " +
             "WHERE (:" + StudentColumnNames.CONTRACT.name() + "::varchar(255) IS NULL OR " + StudentColumnNames.CONTRACT.name() + " = :" + StudentColumnNames.CONTRACT.name() + "::varchar(255)) " +
             "AND (:" + StudentColumnNames.JOBS.name() + "::varchar(255) IS NULL OR " + StudentColumnNames.JOBS.name() + " = :" + StudentColumnNames.JOBS.name() + "::varchar(255)) " +
-            "AND (:" + StudentColumnNames.EXPERIENCE.name() + "::varchar(255) IS NULL OR " + StudentColumnNames.EXPERIENCE.name() + " = :" + StudentColumnNames.EXPERIENCE.name() + "::varchar(255)) " +
+            "AND (:" + StudentColumnNames.EXPERIENCE.name() + "::varchar(255) IS NULL OR " + StudentColumnNames.EXPERIENCE.name() + " >= :" + StudentColumnNames.EXPERIENCE.name() + "::varchar(255)) " +
             "AND (:" + StudentColumnNames.ACTIVITIES.name() + "::varchar(255) IS NULL OR " + StudentColumnNames.ACTIVITIES.name() + " = :" + StudentColumnNames.ACTIVITIES.name() + "::varchar(255))";
 
     public List<Student> getStudentsByTags(String contract, String jobs, String experience, String activities) {
