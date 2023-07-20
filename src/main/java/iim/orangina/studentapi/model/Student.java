@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 public class Student {
 
     private Long id;
+    private String avatar;
     private String firstName;
     private String lastName;
     private String email;
@@ -15,5 +16,6 @@ public class Student {
     private String jobs;
     private String experience;
     private String activities;
+    private String department;
 
 }

@@ -16,6 +16,7 @@ public class StudentRowMapper implements RowMapper<Student> {
         var result = new Student();
 
         result.setId(rs.getLong(StudentColumnNames.ID.name()));
+        result.setAvatar(rs.getString(StudentColumnNames.AVATAR.name()));
         result.setFirstName(rs.getString(StudentColumnNames.FIRST_NAME.name()));
         result.setLastName(rs.getString(StudentColumnNames.LAST_NAME.name()));
         result.setEmail(rs.getString(StudentColumnNames.EMAIL.name()));
@@ -23,6 +24,7 @@ public class StudentRowMapper implements RowMapper<Student> {
         result.setJobs(rs.getString(StudentColumnNames.JOBS.name()));
         result.setExperience(rs.getString(StudentColumnNames.EXPERIENCE.name()));
         result.setActivities(rs.getString(StudentColumnNames.ACTIVITIES.name()));
+        result.setDepartment(rs.getString(StudentColumnNames.DEPARTMENT.name()));
 
         return result;
     }
