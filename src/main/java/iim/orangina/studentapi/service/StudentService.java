@@ -13,7 +13,7 @@ public class StudentService {
 
     private final StudentRepository studentRepository;
 
-    public List<Student> getByTags(String contract, String jobs, Integer experience, String activities) {
+    public List<Student> getByTags(String contract, String jobs, String experience, String activities) {
         return studentRepository.getStudentsByTags(contract, jobs, experience, activities);
     }
 }

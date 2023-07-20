@@ -13,7 +13,7 @@ public class Student {
     private String email;
     private String contract;
     private String jobs;
-    private Integer experience;
+    private String experience;
     private String activities;
 
 }

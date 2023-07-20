@@ -21,7 +21,7 @@ public class StudentRowMapper implements RowMapper<Student> {
         result.setEmail(rs.getString(StudentColumnNames.EMAIL.name()));
         result.setContract(rs.getString(StudentColumnNames.CONTRACT.name()));
         result.setJobs(rs.getString(StudentColumnNames.JOBS.name()));
-        result.setExperience(rs.getInt(StudentColumnNames.EXPERIENCE.name()));
+        result.setExperience(rs.getString(StudentColumnNames.EXPERIENCE.name()));
         result.setActivities(rs.getString(StudentColumnNames.ACTIVITIES.name()));
 
         return result;

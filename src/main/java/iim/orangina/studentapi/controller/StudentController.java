@@ -18,7 +18,7 @@ public class StudentController {
     public List<Student> getStudentByTags(
             @RequestParam(required = false) String contract,
             @RequestParam(required = false) String jobs,
-            @RequestParam(required = false) Integer experience,
+            @RequestParam(required = false) String experience,
             @RequestParam(required = false) String activities
     ) {
         return studentService.getByTags(contract, jobs, experience, activities);
